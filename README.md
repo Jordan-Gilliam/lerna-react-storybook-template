@@ -3,7 +3,7 @@
   <br>
   <p align="center">
       <a href="#contributors">
-    <img src="https://img.shields.io/badge/all_contributors-3-orange.svg?style=for-the-badge" alt="Contributors">
+    <img src="https://img.shields.io/badge/all_contributors-1-orange.svg?style=for-the-badge" alt="Contributors">
   </p>
   <p align="center">
       <a href="https://lerna.js.org/">
