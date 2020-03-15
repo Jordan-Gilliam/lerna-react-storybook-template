@@ -13,6 +13,10 @@
     <a href="https://forthebadge.com">
     <img src="https://img.shields.io/badge/DX%20--%3E-UX-blue?style=for-the-badge" alt="For the badge">
   </p>
+     <p align="center">
+    <a href="https://travis-ci.com/Jordan-Gilliam/lerna-react-storybook-template">
+    <img src="https://travis-ci.com/Jordan-Gilliam/lerna-react-storybook-template.svg?style=for-the-badge?branch=master" alt="Travis Ci">
+  </p>
 
 <p align="center">
   <a href="#Features">Features</a> •
