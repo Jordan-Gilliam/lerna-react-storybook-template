@@ -14,14 +14,13 @@
         "coverage": "jest --coverage",
         "deploy-storybook": "storybook-to-ghpages",
         "dev": "start-storybook -p 5555",
-        "lint:js": "eslint . --ext .js --ignore-pattern lib --ignore-pattern node_modules",
-        "lint:styles": "stylelint './packages/**/*.js'",
-        "lint": "npm lint:js && npm lint:styles",
         "now-build": "build-storybook -c .storybook -o public",
         "prettier": "prettier --write \"**/*.{js,json,md,yml}\"",
         "lerna-publish": "lerna publish",
         "test": "npm build && npm lint && npm coverage",
-        "unit": "jest"
+        "unit": "jest",
+        "lint": "prettier-standard --lint",
+        "format": "prettier-standard --format"
     },
     "husky": {
         "hooks": {
@@ -29,10 +28,7 @@
         }
     },
     "lint-staged": {
-        "*.{js,json,md,yml}": [
-            "prettier --write",
-            "git add"
-        ]
+        "*": "prettier-standard --changed --lint --format"
     },
     "devDependencies": {
         "@babel/cli": "7.7.7",
@@ -53,7 +49,7 @@
         "jest-resolve": "24.9.0",
         "jest-styled-components": "6.3.4",
         "lerna": "3.20.2",
-        "lint-staged": "9.5.0",
+        "lint-staged": "^10.0.8",
         "modern-node": "^2.7.0",
         "prettier-standard": "^16.2.1",
         "react": "16.12.0",
