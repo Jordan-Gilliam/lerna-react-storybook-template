@@ -14,11 +14,11 @@ before_install:
   # - export DISPLAY=:99.0
   # - sh -e /etc/init.d/xvfb start
 install:
-  - yarn add codecov -g
-  - yarn ci
+  - npm ci
 script:
   # run build script specified in package.json
-  - yarn ci
+  - npm ci
+  - npm run test
   # call script for deploying of produced artifacts
   # - bash ./.travis-deploy.sh
 after_success:
