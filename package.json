@@ -1,0 +1,65 @@
+{
+    "name": "root",
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+    "engines": {
+        "node": ">=10.15.0"
+    },
+    "scripts": {
+        "bootstrap": "lerna bootstrap --use-workspaces",
+        "clean": "lerna clean && rm -rf node_modules",
+        "build": "lerna exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.stories.js,**/*.spec.js",
+        "coverage": "jest --coverage",
+        "deploy-storybook": "storybook-to-ghpages",
+        "dev": "start-storybook -p 5555",
+        "lint:js": "eslint . --ext .js --ignore-pattern lib --ignore-pattern node_modules",
+        "lint:styles": "stylelint './packages/**/*.js'",
+        "lint": "npm lint:js && npm lint:styles",
+        "now-build": "build-storybook -c .storybook -o public",
+        "prettier": "prettier --write \"**/*.{js,json,md,yml}\"",
+        "lerna-publish": "lerna publish",
+        "test": "npm build && npm lint && npm coverage",
+        "unit": "jest"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{js,json,md,yml}": [
+            "prettier --write",
+            "git add"
+        ]
+    },
+    "devDependencies": {
+        "@babel/cli": "7.7.7",
+        "@babel/core": "7.7.7",
+        "@babel/preset-env": "7.7.7",
+        "@babel/preset-react": "7.7.4",
+        "@storybook/addon-docs": "^6.0.0-alpha.27",
+        "@storybook/addon-info": "^6.0.0-alpha.2",
+        "@storybook/react": "^6.0.0-alpha.27",
+        "babel-core": "7.0.0-bridge.0",
+        "babel-jest": "24.9.0",
+        "babel-loader": "8.0.6",
+        "babel-plugin-styled-components": "1.10.6",
+        "eslint": "6.8.0",
+        "husky": "4.0.0",
+        "jest": "24.9.0",
+        "jest-haste-map": "24.9.0",
+        "jest-resolve": "24.9.0",
+        "jest-styled-components": "6.3.4",
+        "lerna": "3.20.2",
+        "lint-staged": "9.5.0",
+        "modern-node": "^2.7.0",
+        "prettier-standard": "^16.2.1",
+        "react": "16.12.0",
+        "react-dom": "16.12.0",
+        "react-test-renderer": "16.12.0",
+        "styled-components": "4.4.1",
+        "webpack": "4.41.5"
+    }
+}
