@@ -15,10 +15,8 @@
   </p>
 
 <p align="center">
-  <a href="#about">About</a> •
-  <a href="#installation">Installation</a> •
-  <a href="#updating">Updating</a> •
-  <a href="#features">Features</a> •
+  <a href="#Features">Features</a> •
+  <a href="#Getting Started">Getting Started</a> •
   <a href="#contributing">Contributing</a> •
   <a href="#contributors">Contributors</a> •
   <a href="#license">License</a>
@@ -26,11 +24,22 @@
 
 ---
 
+## Features
+
+- 🐉 [Lerna](https://lernajs.io/)  - The Monorepo manager
+- 🚀 [React](https://reactjs.org/)  -  JavaScript library for user interfaces
+- 💅 [styled-components](https://www.styled-components.com/)  -  CSS in JS elegance
+- 💅 [prettier-standard](https://github.com/sheerun/prettier-standard)  -  Formats with Prettier and lints with ESLint
+- 🛠 [Babel](https://babeljs.io/)  -  Compiles next-gen JavaScript
+- 📖 [Storybook](https://storybook.js.org/) - UI Component Environment
+- 🃏 [Jest](https://jestjs.io/)  -  Unit/Snapshot Testing
+
 ## Getting Started
 
-> npm i
-> npm run bootstrap
-> npm run dev
+- `npm run dev` - This starts Storybook for viewing all the components locally.
+- `npm run bootstrap` - This installs all of the packages and links dependent packages together.
+- `npm run build` - This babelfies all of the packages and creates `/lib` folders for each one.
+- `npm run test` - Run all linting and unit tests before committing.
 
 ## Contributing
 
