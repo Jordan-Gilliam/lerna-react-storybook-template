@@ -17,8 +17,7 @@
     "clean": "lerna clean && rm -rf node_modules",
     "dev": "start-storybook -p 5555",
     "now-build": "build-storybook -c .storybook -o public",
-    "test": "npm build && npm lint && npm coverage",
-    "unit": "jest",
+    "test": "jest",
     "precommit": "lint-staged",
     "lint": "prettier-standard --lint",
     "format": "prettier-standard --format"
