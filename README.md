@@ -26,10 +26,6 @@
 
 ---
 
-## About
-
-> Template
-
 ## Getting Started
 
 > npm i
