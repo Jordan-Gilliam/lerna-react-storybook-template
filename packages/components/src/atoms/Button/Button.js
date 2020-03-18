@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import React from 'react';
-import { spacing } from '../Theme';
+import { spacing } from '../../Theme';
 import PropTypes from 'prop-types';
 
 const APPEARANCES = {
